@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Css Load</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		 /*carga con css*/
+  .loader:before,
+.loader:after,
+.loader {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  margin: 8em auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-animation-delay: 0.16s;
+  animation-delay: 0.16s;
+}
+.loader:before {
+  left: -3.5em;
+}
+.loader:after {
+  left: 3.5em;
+  -webkit-animation-delay: 0.32s;
+  animation-delay: 0.32s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em rgba(0,0,0,.7);
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 rgba(0,0,0,.7);
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em rgba(0,0,0,.7);
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 rgba(0,0,0,.7);
+  }
+}
+
+	</style>
+
+</head>
+<body>
+
+	<section id="adherencia" class="bg-light-gray" >
+		<div class="loader"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Control de adherencia</h2>
+                        <h3 class="section-subheading text-muted" id="mes_adherencia"></h3>
+                    </div>
+                </div>
+                <div class="row justify-element-right">
+                        <button id="btnConsultAdherencia" type="button" class="btnM btnM-primary btnM-lg">Consultar Adherencia Actual</button>
+                        <button id="btnConsultAdherenciaBefore" type="button" class="btnM btnM-success btnM-lg">Consultar Adherencia Mes Anterior</button>
+                </div>
+                <span id="span_mensajeDatosAdherencia" class="text-center">
+                    
+                </span>
+                <div class="table-responsive" style="margin-top: 20px;">
+                    <table class="table  table-hover table-striped table-condensed " >
+                        <thead>
+                            <tr>
+                                <th class="width10 text-center" colspan="4">
+                                    Seguimiento mensual
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="width10 text-center">Por Minutos Acumulado</th>
+                                <th class="width20 text-center">Por Adherencia</th>
+                                <th class="width10 text-center">Total Dias injustificados - Un solo Registro</th>
+                                <th class="width10 text-center">Habilita</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_adherencia_mensual">
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <div class="table-responsive">
+                    <table class=" table table-bordered table-hover table-striped table-condensed" id="tabla_adherencia" >
+                        <thead>
+                            <tr>
+                                <th class="width10 text-center" colspan="11">
+                                    Seguimiento Diario
+                                </th>
+                            </tr>
+                            <tr>
+                                <th WIDTH="10%" class="text-center">Fecha</th>
+                                <th class="width10 text-center">Centro de Costos Real</th>
+                                <th class="width10 text-center">Hora de Entrada Programada</th>
+                                <th class="width10 text-center">Hora de Salida Programada</th>
+                                <th class="width10 text-center">Hora de Entrada Real</th>
+                                <th class="width10 text-center">Hora de Salida Real</th>
+                                <th class="width10 text-center">Minutos Acumulados</th>
+                                <th class="width10 text-center">Observación</th>
+                                <th class="width10 text-center">Adherencia</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_aherenciaDiaria">
+                        </tbody>
+                    </table>
+                </div>
+            </div>        
+        </section>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

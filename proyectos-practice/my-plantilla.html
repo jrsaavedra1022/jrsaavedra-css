@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My plantilla</title>
+</head>
+<style>
+	body{
+		margin: 0;
+		font-family: 'Arial';
+	}
+	.container__area{
+		display: grid;
+		grid-template: 100px 1fr  1fr  150px/ 100px  1fr 1fr 300px;
+		grid-template-areas: "header header header header" 
+								 "nav__left banner notify task"
+								 "nav__left news news task" 
+								 "footer footer footer footer";
+
+		grid-gap: 1px;
+		height: 100vh;
+	}
+	.item{
+		background: green;
+		border: blue 1px solid;
+		padding: 5px;
+	}
+	.header{
+		grid-area: header; 
+	}
+	.nav__left{
+		grid-area: nav__left;
+	}
+	.banner{
+		grid-area: banner;
+	}
+	.notify{
+		grid-area: notify;
+	}
+	.task{
+		grid-area: task;
+	}
+	.news{
+		grid-area: news;
+	}
+	.footer{
+		grid-area: footer;
+	}
+</style>
+<body>
+	<section class="container__area">
+		<div class="item header">contenido #1</div>
+		<div class="item nav__left">contenido #2</div>
+		<div class="item banner">contenido #3</div>
+		<div class="item notify">contenido #4</div>
+		<div class="item task">contenido #5</div>
+		<div class="item news">contenido #6</div>
+		<div class="item footer">contenido #7</div>	
+	</section>
+</body>
+</html>

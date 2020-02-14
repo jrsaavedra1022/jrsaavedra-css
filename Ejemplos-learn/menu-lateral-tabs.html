@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Menu lateral pasos</title>
+<link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap-material-design.min.css">
+<style>
+.nav.nav-tabs {
+	float: left;
+	display: block;
+	border-bottom:0;
+	border-right: 1px solid #ddd;
+	padding-right: 15px;
+}
+
+/*estilos independientes mejoras con el usuario*/
+#myTab {
+	background-color: #0B4B6A;
+}
+#myTab li a i {
+	text-align: center;
+	color: #FBFCFC;
+}
+#myTab li a.show i{
+	color: #C6DC3A;
+}
+#myTab {
+	border-right: 5px solid red;
+}
+#content-reference div.tab-content {
+	border: 1px solid blue;
+}
+#content-reference div.container{
+	display: grid;
+	grid-template-columns: 70px 1fr;
+	grid-gap: 5px;
+}
+#content-reference .tab-content .tab-pane .card {
+	height: 100%;
+}
+.burger-button{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: block;
+	background-color: rgba(0,0,0,.8);
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+	z-index: 4;
+	left: 5px;
+	top: 5px;
+	color: white;
+	margin-bottom: 1rem;
+}
+</style>
+</head>
+<body>
+	<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">  Tooltip on right
+</button>
+<i class="fa fa-user"></i>
+<section id="content-reference" class="mt-5">
+	<div class="container">
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li><i class="fa fa-list burger-button"></i></li>
+			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Personal">
+				<a class="nav-link active show" data-toggle="tab" href="#home" role="tab" aria-controls="home" ><i class="fa fa-user fa-2x"></i></a>
+			</li>
+			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Turno y cargo">
+				<a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"><i class="fa fa-users fa-2x"></i></a>
+			</li>
+			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Zona y subzona">
+				<a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages"><i class="fa fa-train fa-2x"></i></a>
+			</li>
+			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Estacion">
+				<a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"><i class="fa fa-map-marker fa-2x"></i></a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="home" role="tabpanel">
+				<div class="card">
+					<div class="card-header text-center">centenido</div>
+					<div class="card-body">
+						<div class="row">
+			              <div class='col-md-6 mb-3'>
+			                <label for="txt_turno_tec_prog_c" class="bmd-label-stactic">Turno</label>
+			                <select id="txt_turno_tec_prog_c" type="text" class="custom-select class_turno_tecnicos noselectAll" name="txt_turno_tec_prog_c" multiple="">
+			                  <option value=""></option>
+			                </select>
+			                <span id="span_txt_turno_tec_prog_c" class="invalid-feedback d-block" role="alert"></span>
+			              </div>
+			              <div class='col-md-6 mb-3'>
+			                <label for="txt_cargo_tec_prog_c" class="bmd-label-stactic">Cargos</label>
+			                <select id="txt_cargo_tec_prog_c" type="text" class="custom-select class_cargo_tecnicos noselectAll" name="txt_cargo_tec_prog_c" multiple="">
+			                  <option value=""></option>
+			                </select>
+			                <span id="span_txt_cargo_tec_prog_c" class="invalid-feedback d-block" role="alert"></span>
+			              </div>
+			            </div>
+						
+					</div>
+				</div>
+
+			</div>
+			<div class="tab-pane" id="profile" role="tabpanel">..2.</div>
+			<div class="tab-pane" id="messages" role="tabpanel">.3..</div>
+			<div class="tab-pane" id="settings" role="tabpanel">.4..</div>
+		</div>
+	</div>
+</section>
+
+<!-- librerias de ayuda -->
+<script src="../vendor/Jquery/js/jquery-3.3.1.min.js"></script>
+<script src="../vendor/Jquery/js/popper.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap-material-design.min.js"></script>
+<script>
+	$("#myTab li").tooltip('enable');
+</script>
+<!-- material Design -->
+<script>$(document).ready(function(){$('body').bootstrapMaterialDesign();});</script>
+
+
+</body>
+</html>

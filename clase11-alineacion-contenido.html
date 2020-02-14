@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GAP</title>
+		<style>
+		body{
+			font-family: 'Arial';
+		}
+		.container{
+			/*comenzamos*/
+			display: grid;
+			grid-gap: 5px;
+			height: 100vh;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+			/*horizontal default stretch*/
+			/*justify-items : start end center stretch;
+			vertical
+			align-items : start end center stretch;*/
+			justify-items: center;
+			align-items: center;
+		}
+		.item {
+			background: lightblue;
+			padding: 10px;
+			border: 1px solid red;
+			/*margin-right: 10px;
+			margin-bottom: 10px;*/
+		}
+		.item:nth-of-type(5){
+			align-self: start;
+			justify-self: start;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<section class="container">
+		<div class="item">elemento #1</div>
+		<div class="item">elemento #2</div>
+		<div class="item">elemento #3</div>
+		<div class="item">elemento #4</div>
+		<div class="item">elemento #5</div>
+		<div class="item">elemento #6</div>
+		<div class="item">elemento #7</div>
+		<div class="item">elemento #8</div>
+		<div class="item">elemento #9</div>
+		<div class="item">elemento #10</div>
+		<div class="item">elemento #11</div>
+		<div class="item">elemento #12</div>
+	</section>
+</body>
+</html>
